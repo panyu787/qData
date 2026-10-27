@@ -23,13 +23,13 @@ spring:
   # Redis configuration
   redis:
     # Address
-    host: 127.0.0.1
+    host: 192.168.137.150
     # Port, defaults to 6379
     port: 6379
     # Database index
     database: 0
     # Password
-    password:
+    password: 'J98%FHF#9h@e88h9fre9'
     # Connection timeout
     timeout: 10s
     lettuce:
@@ -43,10 +43,10 @@ spring:
         # Maximum blocking wait time for the connection pool (use a negative value for no limit)
         max-wait: -1ms
   rabbitmq:
-    host: 127.0.0.1
+    host: 192.168.137.150
     port: 5672
-    username: username
-    password: password
+    username: admin
+    password: 'Ej^iUNFLp9MQouc1'
     listener:
       simple:
         acknowledge-mode: manual
@@ -119,7 +119,7 @@ mysql:
   # JDBC driver class name
   driver-class-name: com.mysql.cj.jdbc.Driver
   # Primary database JDBC connection URL
-  url: jdbc:mysql://mysql:3306/qdata?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+  url: jdbc:mysql://192.168.137.150:3306/qdata?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
   # Primary database username
   username: root
   # Primary database password
@@ -161,15 +161,15 @@ oracle:
 # Scheduler-related configuration
 ds:
   # Scheduler API prefix
-  base_url: http://127.0.0.1:12345/dolphinscheduler
+  base_url: http://192.168.137.150:12345/dolphinscheduler
   # Data quality service component HTTP address
-  quality_url: http://127.0.0.1:8083/quality/qualityTaskExecutor/runExecuteTask
+  quality_url: http://192.168.137.1:8083/quality/qualityTaskExecutor/runExecuteTask
   # Metadata collection task API prefix
-  mc_url: http://localhost:8080/mc/taskExecutor/runExecuteTask
+  mc_url: http://192.168.137.1:8080/mc/taskExecutor/runExecuteTask
   # DolphinScheduler project code for data quality tasks
-  http_quality_projectCode: 134799536571008
+  http_quality_projectCode: 147372832245312
   # DolphinScheduler project code for metadata collection tasks
-  http_mc_projectCode: 173091707675808
+  http_mc_projectCode: 173198624561952
   # Scheduler token (can be modified as needed)
   token: b07f0e57c4818043a57ba05a28da291a
   # Resource center path
@@ -177,7 +177,7 @@ ds:
   # Spark-related configuration
   spark:
     # Spark master address
-    master_url: spark://127.0.0.1:7077
+    master_url: spark://spark:7077
     # JAR package path in DolphinScheduler
     main_jar: file:/dolphinscheduler/default/resources/spark-jar/qdata-executor-etl.jar
     # JAR main entry point
@@ -185,17 +185,17 @@ ds:
   # HDFS-related configuration
   hdfs:
     # NameNode RPC address (client entry address for connecting to HDFS)
-    url: hdfs://127.0.0.1:8020
+    url: hdfs://namenode:8020
   # Scheduler Redis configuration (used to obtain the latest data source information and ensure task execution)
   redis:
     # Address
-    host: 127.0.0.1
+    host: redis
     # Port, defaults to 6379
     port: 12138
     # Database index
     database: 0
     # Password
-    password:
+    password: 'J98%FHF#9h@e88h9fre9'
 
 datax:
   # DataX root directory, can be overridden by QDATA_DATAX_HOME
