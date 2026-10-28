@@ -34,6 +34,7 @@
       </div>
       <app-main />
       <settings ref="settingRef" />
+      <PlatformAssistant />
     </div>
   </div>
 </template>
@@ -43,6 +44,7 @@ import { useRoute } from "vue-router";
 import { useWindowSize } from "@vueuse/core";
 import Sidebar from "./components/Sidebar/index.vue";
 import { AppMain, Navbar, Settings, TagsView } from "./components";
+import PlatformAssistant from "@/components/PlatformAssistant/index.vue";
 import defaultSettings from "@/settings";
 
 import useAppStore from "@/store/system/app";
