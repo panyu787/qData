@@ -148,8 +148,8 @@ EOF
 # docker build \
   #  -f "/opt/easyaiot/HARNESS/Dockerfile" \                                 # Dockerfile 路径
   #  -t "easyaiot/harness:latest" \                                          # 镜像名称
-  #  --build-arg "DSH_VERSION=0.1.0-rc.6" \                                  # DSH 版本（DeepSeek Harness 版本）
-  #  --build-arg "HARNESS_SIDEBAR_PACKAGE=dsh-better-sidebar@0.12.1" \       # 侧边栏插件包
+  #  --build-arg "DSH_VERSION=0.1.0-rc.6" \                                  # 设置构建参数 DSH_VERSION：（DeepSeek Harness 版本）
+  #  --build-arg "HARNESS_SIDEBAR_PACKAGE=dsh-better-sidebar@0.12.1" \       # 设置构建参数 HARNESS_SIDEBAR_PACKAGE：（侧边栏插件包）
   #  --platform "linux/amd64" \                                              # 平台
   #  "/opt/easyaiot/HARNESS"                                                 # 构建上下文
 do_build() {
